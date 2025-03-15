@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+.env/
+ECHO 处于打开状态。
+# 数据集
+data/
+!data/charset.txt
+ECHO 处于打开状态。
+# 训练输出
+outputs/
+ECHO 处于打开状态。
+# IDE
+.idea/
+.vscode/
+ECHO 处于打开状态。
+# 系统文件
+Thumbs.db
+.DS_Store
+ECHO 处于打开状态。
+# 大文件
+*.pth
+*.onnx
+*.bin

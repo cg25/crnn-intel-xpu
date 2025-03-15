@@ -1,0 +1,8 @@
+data_root: "../data/synthetic"
+charset_path: "../data/charset.txt"
+img_h: 32
+batch_size: 32
+lr: 0.0003
+epochs: 50
+checkpoint_dir: "../outputs/checkpoints"
+device: "xpu"

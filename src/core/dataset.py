@@ -6,7 +6,7 @@ from torch.utils.data import Dataset
 
 
 class CRNNDataset(Dataset):
-    def __init__(self, data_root: str, img_h: int = 32, charset_path: str = "data/charset.txt"):
+    def __init__(self, data_root: str, img_h: int = 32, charset_path: str = "../../data/charset.txt"):
         self.img_paths = sorted(list(Path(data_root).glob("*.png")))
         assert len(self.img_paths) > 0, f"No PNG images found in {data_root}"
 
@@ -48,12 +48,12 @@ class CRNNDataset(Dataset):
                 if c not in self.char_to_idx:
                     invalid_samples.append((
                         str(path),
-                        f"字符 '{c}' 不在字符集中（允许字符：{self.charset}）"
+                        f"character '{c}' not in charset（allowed charset：{self.charset}）"
                     ))
 
         if invalid_samples:
             error_msg = "\n".join([f"{path}: {reason}" for path, reason in invalid_samples])
-            raise ValueError(f"发现无效标签字符：\n{error_msg}")
+            raise ValueError(f"invalid character：\n{error_msg}")
 
     @property
     def num_classes(self):
@@ -61,10 +61,10 @@ class CRNNDataset(Dataset):
 
 
 if __name__ == "__main__":
-    dataset = CRNNDataset(data_root="data/synthetic", img_h=32)
-    print(f"数据集大小：{len(dataset)}")
+    dataset = CRNNDataset(data_root="../../data/train", img_h=32)
+    print(f"train dataset size：{len(dataset)}")
 
     img, target = dataset[0]
-    print(f"图像张量形状：{img.shape}")
-    print(f"标签索引：{target.tolist()}")
-    print(f"原始标签：{dataset.img_paths[0].stem}")
+    print(f"train image shape：{img.shape}")
+    print(f"target：{target.tolist()}")
+    print(f"label：{dataset.img_paths[0].stem}")

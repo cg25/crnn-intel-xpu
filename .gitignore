@@ -1,27 +1,17 @@
-# Python
+ï»¿# Python
 __pycache__/
 *.py[cod]
 *.so
 .Python
 venv/
 .env/
-ECHO ´¦ÓÚ´ò¿ª×´Ì¬¡£
-# Êý¾Ý¼¯
-data/
-!data/charset.txt
-ECHO ´¦ÓÚ´ò¿ª×´Ì¬¡£
-# ÑµÁ·Êä³ö
-outputs/
-ECHO ´¦ÓÚ´ò¿ª×´Ì¬¡£
+
 # IDE
 .idea/
 .vscode/
-ECHO ´¦ÓÚ´ò¿ª×´Ì¬¡£
-# ÏµÍ³ÎÄ¼þ
+
 Thumbs.db
 .DS_Store
-ECHO ´¦ÓÚ´ò¿ª×´Ì¬¡£
-# ´óÎÄ¼þ
-*.pth
-*.onnx
-*.bin
+
+data/
+

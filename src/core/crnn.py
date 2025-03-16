@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-
 class CRNN(nn.Module):
     def __init__(self, img_h: int, num_classes: int):
         super().__init__()

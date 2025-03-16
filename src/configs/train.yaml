@@ -1,8 +1,8 @@
-data_root: "../data/synthetic"
+data_root: "../data/train"
 charset_path: "../data/charset.txt"
 img_h: 32
-batch_size: 32
+batch_size: 16
 lr: 0.0003
-epochs: 50
+epochs: 100
 checkpoint_dir: "../outputs/checkpoints"
 device: "xpu"

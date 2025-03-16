@@ -91,7 +91,7 @@ def main(config_path="configs/train.yaml"):
             'loss': avg_loss,
         }, str(checkpoint_path))
 
-        print(f"Epoch [{epoch + 1}/{cfg['epochs']}] 检查点已覆盖保存")
+        print(f"Epoch [{epoch + 1}/{cfg['epochs']}] checkpoint overwritten")
 
         print(f"Epoch [{epoch + 1}/{cfg['epochs']}] "
               f"Average Loss: {avg_loss:.4f} "
